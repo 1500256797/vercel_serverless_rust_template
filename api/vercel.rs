@@ -19,10 +19,10 @@ async fn get_index_route() -> impl IntoResponse {
 #[tokio::main]
 async fn main() -> Result<(), vercel_runtime::Error> {
     init_tracing();
-    // let app = setup_server();
-    let app = Router::new()
-        .route("/", get(get_index_route))
-        .layer(TraceLayer::new_for_http());
+    let app = setup_server();
+    // let app = Router::new()
+    //     .route("/", get(get_index_route))
+    //     .layer(TraceLayer::new_for_http());
     // let handler = ServiceBuilder::new()
     //     .map_request(process_request)
     //     .map_response(process_response)
