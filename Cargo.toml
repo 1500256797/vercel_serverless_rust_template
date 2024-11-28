@@ -1,0 +1,28 @@
+[package]
+name = "vercel-serverless-template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde_json = "1.0.108"
+tracing = { version = "0.1", features = ["log"] }
+axum = "0.7.9"
+tokio = { version = "1.29.1", features = ["full"] }
+tower = "0.5.1"
+tower-service = "0.3.2"
+vercel_runtime = "1.1.4"
+serde = "1.0.198"
+tracing-subscriber = "0.3.18"
+utoipa = "5.2.0"
+once_cell = "1.19.0"
+futures-util = "0.3.30"
+dotenv = "0.15.0"
+jsonwebtoken = "9.3.0"
+utoipa-swagger-ui = { version = "8.0.3", features = ["axum"] }
+tower-http = { version = "0.5.2", features = ["trace"] }
+http-body-util = "0.1.2"
+base64 = "0.22.1"
+vercel_axum = "1.1.4"
+[[bin]]
+name = "vercel"
+path = "api/vercel.rs"
