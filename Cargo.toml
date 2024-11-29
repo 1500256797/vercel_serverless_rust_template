@@ -19,10 +19,16 @@ futures-util = "0.3.30"
 dotenv = "0.15.0"
 jsonwebtoken = "9.3.0"
 utoipa-swagger-ui = { version = "8.0.3", features = ["axum"] }
-tower-http = { version = "0.5.2", features = ["trace"] }
+tower-http = { version = "0.6.2", features = ["trace"] }
 http-body-util = "0.1.2"
 base64 = "0.22.1"
 vercel_axum = "1.1.4"
 [[bin]]
 name = "vercel"
 path = "api/vercel.rs"
+
+
+[features]
+default = ["prod"]
+prod = []
+local_dev = []
